@@ -32,7 +32,7 @@ function getRandomReply() {
 function sendMessage() {  
 
     text.addEventListener('keypress', (e) => {
-        const str = text.value;
+        const str = text.value; // для обхода ввода пустой строки и пробелов пользователем
         if (e.key == 'Enter' && str.trim() != '') {            
             // добавит
             messages.innerHTML +=` 
