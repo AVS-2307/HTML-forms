@@ -32,13 +32,13 @@ function getRandomReply() {
 function sendMessage() {  
 
     text.addEventListener('keypress', (e) => {
-
-        if (e.key == 'Enter') {            
+        const str = text.value;
+        if (e.key == 'Enter' && str.trim() != '') {            
             // добавит
             messages.innerHTML +=` 
             <div class="message message_client">
                 <div class="message__time">${time}</div>
-                <div class="message__text">${text.value}</div>
+                <div class="message__text">${str}</div>
             </div>
             `;
             text.value = '';
